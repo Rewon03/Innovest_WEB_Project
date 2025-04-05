@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for proper character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startups - Innovest</title>
+    <!-- External CSS and Font Awesome for icons -->
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- SweetAlert2 for better alerts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header id="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="Assets/innovest-logo.png" alt="Innovest Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="startups.html" class="active">Startups</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="submit.html">Startup Submission</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="startups-hero">
+            <div class="startups-hero-content">
+                <h1>Discover Innovative Startups</h1>
+                <p>Explore groundbreaking startups that are shaping the future of technology and business. Find your next investment opportunity or collaboration partner.</p>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+        <div class="startup-filters">
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category">
+                        <option value="">All Categories</option>
+                        <option value="tech">Technology</option>
+                        <option value="fintech">Fintech</option>
+                        <option value="health">Healthcare</option>
+                        <option value="edu">Education</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="funding">Funding Stage</label>
+                    <select id="funding" name="funding">
+                        <option value="">All Stages</option>
+                        <option value="seed">Seed</option>
+                        <option value="series-a">Series A</option>
+                        <option value="series-b">Series B</option>
+                        <option value="series-c">Series C+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="location">Location</label>
+                    <select id="location" name="location">
+                        <option value="">All Locations</option>
+                        <option value="us">United States</option>
+                        <option value="eu">Europe</option>
+                        <option value="asia">Asia</option>
+                    </select>
+                </div>
+                <button class="filter-button">
+                    <i class="fas fa-filter"></i>
+                    Apply Filters
+                </button>
+            </div>
+        </div>
+
+        <!-- Startups Grid -->
+        <div class="startups-grid">
+            <!-- Hangma Achar -->
+            <div class="startup-card">
+                <div class="startup-image">
+                    <img src="Assets/startups/hangma achar.jpg" alt="Hangma Achar">
+                </div>
+                <div class="startup-content">
+                    <span class="startup-category">
+                        <i class="fas fa-utensils"></i>
+                        Food
+                    </span>
+                    <h3>Hangma Achar</h3>
+                    <p>Authentic, homemade achar that preserves the rich, traditional flavors of Nepal's diverse local cuisines. Made with fresh, natural ingredients and crafted using time-honored recipes.</p>
+                    <div class="startup-meta">
+                        <div class="startup-founder">
+                            <div class="founder-info">
+                                <h4>Ejra Limbu</h4>
+                                <span class="founder-title">Founder</span>
+                            </div>
+                        </div>
+                        <div class="startup-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-chart-line"></i>
+                                Seed Stage
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                NPR 5,00,000
+                            </span>
+                        </div>
+                    </div>
+                    <button class="more-info-btn" onclick="openStartupModal('hangma-achar')">
+                        <i class="fas fa-info-circle"></i>
+                        More Info
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bhetayo -->
+            <div class="startup-card">
+                <div class="startup-image">
+                    <img src="Assets/startups/bhetayo.jpg" alt="Bhetayo">
+                </div>
+                <div class="startup-content">
+                    <span class="startup-category">
+                        <i class="fas fa-handshake"></i>
+                        Service Provider
+                    </span>
+                    <h3>Bhetayo</h3>
+                    <p>An innovative platform connecting service providers with customers, making everyday tasks easier and more efficient. From home cleaning to maintenance and repairs.</p>
+                    <div class="startup-meta">
+                        <div class="startup-founder">
+                            <div class="founder-info">
+                                <h4>Rochan Man Maharjan</h4>
+                                <span class="founder-title">Founder</span>
+                            </div>
+                        </div>
+                        <div class="startup-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-chart-line"></i>
+                                Series A
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                NPR 12,00,000
+                            </span>
+                        </div>
+                    </div>
+                    <button class="more-info-btn" onclick="openStartupModal('bhetayo')">
+                        <i class="fas fa-info-circle"></i>
+                        More Info
+                    </button>
+                </div>
+            </div>
+
+            <!-- EliteSoft Innovation -->
+            <div class="startup-card">
+                <div class="startup-image">
+                    <img src="Assets/startups/elitesoft innovation.jpg" alt="EliteSoft Innovation">
+                </div>
+                <div class="startup-content">
+                    <span class="startup-category">
+                        <i class="fas fa-laptop-code"></i>
+                        Technology
+                    </span>
+                    <h3>EliteSoft Innovation</h3>
+                    <p>Digital solutions company specializing in social media design, SEO, video editing, web design, and app development. Creating innovative digital strategies.</p>
+                    <div class="startup-meta">
+                        <div class="startup-founder">
+                            <div class="founder-info">
+                                <h4>Krish Shrestha</h4>
+                                <span class="founder-title">Founder</span>
+                            </div>
+                        </div>
+                        <div class="startup-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-chart-line"></i>
+                                Pre-seed
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                NPR 20,00,000
+                            </span>
+                        </div>
+                    </div>
+                    <button class="more-info-btn" onclick="openStartupModal('elite-soft')">
+                        <i class="fas fa-info-circle"></i>
+                        More Info
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ramro Daam -->
+            <div class="startup-card">
+                <div class="startup-image">
+                    <img src="Assets/startups/ramrodaam.jpg" alt="Ramro Daam">
+                </div>
+                <div class="startup-content">
+                    <span class="startup-category">
+                        <i class="fas fa-shopping-cart"></i>
+                        E-commerce
+                    </span>
+                    <h3>Ramro Daam</h3>
+                    <p>Leading marketplace for high-quality second-hand digital goods, specializing in mobile phones, laptops, and electronics. Certified pre-owned devices.</p>
+                    <div class="startup-meta">
+                        <div class="startup-founder">
+                            <div class="founder-info">
+                                <h4>Kamal Brd Thapa</h4>
+                                <span class="founder-title">Founder</span>
+                            </div>
+                        </div>
+                        <div class="startup-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-chart-line"></i>
+                                Series B
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                NPR 50,00,000
+                            </span>
+                        </div>
+                    </div>
+                    <button class="more-info-btn" onclick="openStartupModal('ramro-daam')">
+                        <i class="fas fa-info-circle"></i>
+                        More Info
+                    </button>
+                </div>
+            </div>
+
+            <!-- Deshna -->
+            <div class="startup-card">
+                <div class="startup-image">
+                    <img src="Assets/startups/deshna aachar.jpg" alt="Deshna Pvt.Ltd">
+                </div>
+                <div class="startup-content">
+                    <span class="startup-category">
+                        <i class="fas fa-utensils"></i>
+                        Food
+                    </span>
+                    <h3>Deshna Pvt.Ltd</h3>
+                    <p>Homegrown brand producing high-quality, homemade achar while empowering skilled homemakers. Focus on natural ingredients and traditional recipes.</p>
+                    <div class="startup-meta">
+                        <div class="startup-founder">
+                            <div class="founder-info">
+                                <h4>Sricha Magar</h4>
+                                <span class="founder-title">Founder</span>
+                            </div>
+                        </div>
+                        <div class="startup-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-chart-line"></i>
+                                Series B
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                NPR 3,00,000
+                            </span>
+                        </div>
+                    </div>
+                    <button class="more-info-btn" onclick="openStartupModal('deshna')">
+                        <i class="fas fa-info-circle"></i>
+                        More Info
+                    </button>
+                </div>
+            </div>
+
+            <!-- Namaste Nepal Cleaning -->
+            <div class="startup-card">
+                <div class="startup-image">
+                    <img src="Assets/startups/namaste nepal.jpg" alt="Namaste Nepal Cleaning Service">
+                </div>
+                <div class="startup-content">
+                    <span class="startup-category">
+                        <i class="fas fa-broom"></i>
+                        Cleanliness
+                    </span>
+                    <h3>Namaste Nepal Cleaning Service</h3>
+                    <p>Professional cleaning and maintenance company providing eco-friendly solutions for corporate, commercial, and residential clients across Kathmandu Valley.</p>
+                    <div class="startup-meta">
+                        <div class="startup-founder">
+                            <div class="founder-info">
+                                <h4>Surendra Karki</h4>
+                                <span class="founder-title">Founder</span>
+                            </div>
+                        </div>
+                        <div class="startup-stats">
+                            <span class="stat-item">
+                                <i class="fas fa-chart-line"></i>
+                                Growth
+                            </span>
+                            <span class="stat-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                NPR 50,00,000
+                            </span>
+                        </div>
+                    </div>
+                    <button class="more-info-btn" onclick="openStartupModal('namaste-nepal')">
+                        <i class="fas fa-info-circle"></i>
+                        More Info
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Startup Modal -->
+        <div id="startupModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeStartupModal()">&times;</span>
+                <div class="modal-header">
+                    <img src="" alt="Startup Logo" class="modal-logo">
+                    <div>
+                        <h2 class="modal-title"></h2>
+                        <div class="modal-tags">
+                            <span class="modal-badge"><i class="fas fa-industry"></i> Industry</span>
+                            <span class="modal-badge"><i class="fas fa-rocket"></i> Stage</span>
+                            <span class="modal-badge"><i class="fas fa-money-bill-wave"></i> Funding</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Founder</span>
+                        <span class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Location</span>
+                        <span class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Founded</span>
+                        <span class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Team Size</span>
+                        <span class="info-value"></span>
+                    </div>
+                </div>
+                <div class="modal-description">
+                    <h3>About</h3>
+                    <p></p>
+                </div>
+                <div class="contact-options">
+                    <h3>Contact Options</h3>
+                    <div class="contact-grid">
+                        <a href="tel:" class="contact-button">
+                            <i class="fas fa-phone"></i>
+                            Call Now
+                        </a>
+                        <a href="mailto:" class="contact-button">
+                            <i class="fas fa-envelope"></i>
+                            Email
+                        </a>
+                    </div>
+                </div>
+                <div class="pitch-deck">
+                    <h3>Pitch Deck</h3>
+                    <a href="#" class="pitch-link">
+                        <i class="fas fa-file-powerpoint"></i>
+                        View Pitch Deck
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-grid">
+            <div class="footer-logo-section">
+              <img src="Assets/innovest.png" alt="Innovest Logo">
+            </div>
+            
+            <div class="footer-nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="startups.html">Startups</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="startup-submission.html">Startup Submission</a></li>
+              </ul>
+            </div>
+    
+            <div class="newsletter-content">
+              <h3>Let's connect!</h3>
+              <p>Employers & Investors stay up to date with the latest product updates & announcements.</p>
+              <form class="newsletter-form">
+                <input type="email" placeholder="type your e-mail here...">
+                <button type="submit">Join</button>
+              </form>
+            </div>
+          </div>
+    
+          <div class="footer-bottom">
+            <div class="copyright">© 2025 Innovest. All rights reserved.</div>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Github">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="X">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z"/></svg>
+              </a>
+            </div>
+            <div class="designer-credit">Designed by <a href="#">Rewon Shrestha</a></div>
+          </div>
+        </div>
+      </footer>    
+    <!-- JavaScript for startup card functionality -->
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>
